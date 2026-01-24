@@ -4,6 +4,8 @@
 --white: #FFFEFFff;
 --dust-grey: #D1D0CDff;
 --toasted-almond: #E88B50ff;
+--yellow-almond: #F1BF9F;
+--light-almond: #ed9863;
 --platinum: #F0F2F1ff;
 --charcoal-blue: #2D3F45ff;
 --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
@@ -22,11 +24,15 @@ a{
 header .navbar{
     position: fixed;
     top: 0; right: 0; left: 0;
-    padding: 1rem 7%;
+    height: 4rem;
+    padding: .5rem 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--white);
+   
+}
+.box-shadow{
     z-index: 1000;
     box-shadow: var(--box-shadow);
 }
@@ -76,4 +82,120 @@ header .icon-link:hover{
 header .nav-link-item:hover{
     color: var(--platinum);
    background-color: var(--toasted-almond);
+}
+/* Main part  */
+main{
+    margin-top: 4rem;
+    background-color: var(--white);
+}
+.container-class{
+     padding: 2rem 7%;
+}
+main .heroSection{
+   
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(./images/hero-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+main .heroSection::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.45);
+}
+main .hero-content{
+  
+    position: relative;
+    z-index: 2;
+    
+}
+main #hero-sec-h2{
+     font-size:2.5rem;
+     line-height: 1.4;
+}
+main .para-txt{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--charcoal-blue);
+}
+/* event section */
+
+main .event-section{
+    position: relative;
+    padding-top: 4rem;
+}/*
+main .event-header{
+    text-align: center;
+}*/
+main .h2-txt{
+    font-size: 2rem;
+    
+}
+main .events-list{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+main .event-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: .5rem .75rem;
+    border-radius: 1rem;
+
+    background: linear-gradient(90deg,hsla(40, 79%, 66%, 1)0%,hsla(23, 77%, 61%, 1) 100%);
+
+}
+main .event-meta{
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    padding: .6rem .8rem;
+    background-color: var(--charcoal-blue);
+    color: var(--white);
+    border-radius: 10%;
+}
+main .meta-txt{
+    font-size: 1rem;
+    font-weight: 600;
+}
+main #event-date{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+main .event-content{
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  
+}
+main .register{
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--platinum);
+    color: var(--charcoal-blue);
+    border: none;
+    border-radius: .5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .register:hover{
+   background-color: var(--charcoal-blue);
+   color: var(--platinum);
 }
