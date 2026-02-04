@@ -30,6 +30,7 @@ header .navbar{
     justify-content: space-between;
     align-items: center;
     background-color: var(--white);
+    z-index: 5;
    
 }
 .box-shadow{
@@ -198,4 +199,67 @@ main .register{
 main .register:hover{
    background-color: var(--charcoal-blue);
    color: var(--platinum);
+}
+/*  society cards */
+
+main .card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    gap: 2rem;
+}
+main .society-cards{
+     width: 15rem;
+     box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,.08),
+                0 0.625rem 1.875rem rgba(0,0,0,.12);
+   
+    border-radius: 1rem;
+    overflow:hidden;
+    background-color: var(--white);
+}
+main .society-cards img{
+    width: 100%;
+   height: 17rem;
+    object-fit: fill;
+    display: block;
+}
+main .card-info{
+    padding: .7rem 1.1rem;
+    text-align: center;
+}
+main .card-info h3{
+    font-size: 1.2rem;
+
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 1;
+    overflow: hidden;
+
+}
+
+main .card-info a{
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--light-almond);
+}
+main .card-info a:hover{
+    text-decoration: underline;
+}
+/* media queries */
+
+/* tablets */
+@media ( max-width:1024px ){
+   main .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* mobiles */
+@media ( max-width:640px ){
+    main .card-container{
+        grid-template-columns: 1fr;
+    }
+}
+main .society-cards:hover{
+    transform: scale(1.03);
 }
